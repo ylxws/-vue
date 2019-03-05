@@ -1,10 +1,7 @@
 <template>
   <div class="entry">
-    <div>
-      <img src="@/assets/微信图片_20190305111637.png" alt="">
-    </div>
     <div class="item" v-for="(item, index) in entrys" :key=index>
-      <img :src="item.src" />
+      <img v-lazy="item.src" />
       <p>{{item.title}}</p>
     </div>
   </div>
@@ -16,35 +13,35 @@ export default {
     return {
       entrys: [
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '1'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '2'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '3'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '4'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '5'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '6'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '7'
         },
         {
-          src: '@/assets/微信图片_20190305111637.png',
+          src: require('@/assets/微信图片_20190305111637.png'),
           title: '8'
         }
       ]
@@ -61,4 +58,11 @@ export default {
 <style lang="sass" scoped>
 .entry
   padding: 20px 0
+  display: flex
+  flex-wrap: wrap
+  .item
+    width: 25%
+    align-item: center
+    img
+      width: 100%
 </style>

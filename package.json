@@ -12,6 +12,7 @@
     "element-ui": "^2.4.5",
     "fastclick": "^1.0.6",
     "vue": "^2.6.6",
+    "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <v-footer></v-footer>
   </div>
 </template>
 
 <script>
-
+import VFooter from './components/vfooter'
 export default {
   name: 'app',
+  components: {
+    VFooter
+  }
 }
 </script>
 
@@ -18,6 +24,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  overflow: hidden;
+}
+#app .content{
+  height: calc( 100% - 80px );
+  padding: 8px;
 }
 </style>
