@@ -1,34 +1,27 @@
 <template>
-  <div id="app">
-    <div class="content">
+  <div id="app" @touchmove.prevent>
+    <m-header></m-header>
+    <tab></tab>
+    <keep-alive>
       <router-view></router-view>
-    </div>
-    <v-footer></v-footer>
+    </keep-alive>
+    <player></player>
   </div>
 </template>
 
-<script>
-import VFooter from './components/vfooter'
-export default {
-  name: 'app',
-  components: {
-    VFooter
+<script type="text/ecmascript-6">
+  import MHeader from 'components/m-header/m-header'
+  import Player from 'components/player/player'
+  import Tab from 'components/tab/tab'
+
+  export default {
+    components: {
+      MHeader,
+      Tab,
+      Player
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100vh;
-  overflow: hidden;
-}
-#app .content{
-  height: calc( 100% - 80px );
-  padding: 8px;
-}
+<style scoped lang="stylus" rel="stylesheet/stylus">
 </style>
